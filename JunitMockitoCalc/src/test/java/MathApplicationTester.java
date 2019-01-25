@@ -22,12 +22,13 @@ public class MathApplicationTester {
 	CalculatorService calcService;
 	
 	@Test
-	public void testAcc(){
+	public void testAdd(){
 		//comportamiento de CalculatorService para add dos doubles 
 		when(calcService.add(10.0, 15.0)).thenReturn(25.0);
 		
 		//check funcionalidad add
-		Assert.assertEquals(mathApplication.add(10.0, 15.0), 25.0);
-		
+		//Assert.assertEquals(mathApplication.add(10.0, 15.0), 25.0);
+		//Assert.assertEquals("Suma", mathApplication.add(10.0, 15.0), 25.0);
+		Assert.assertEquals(25.0, mathApplication.add(10.0, 15.0),0.0);
 	}
 }
